@@ -91,17 +91,31 @@ span {
 }
 .photo_gallery_container{
     margin-top: 24px;
+    height: 350px;
 }
 .top-images , .bottom-images{
     flex-direction: column;
     width: 50%;
+    height: 100%;
+    overflow: hidden;
+}
+.photo_gallery_right .top-images img{
+  height: 50%;
+}
+.photo_gallery_right .bottom-images img{
+  height: 50%;
 }
 .photo_gallery_container img{
 width: 100%;
+height: 100%;
 }
 .photo_gallery_left, .photo_gallery_right{
     width: 50%;
 }
+.photo_gallery_right{
+  height: 100%;
+}
+
 .gallery-margin{
     gap: 8px;
 }
