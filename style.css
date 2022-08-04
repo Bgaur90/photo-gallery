@@ -80,48 +80,145 @@ span {
     margin: auto;
     margin-top: 100px;
 }
+.responsive{
+  display: none;
+}
 .gallery-links{
     margin-top: 8px;
 }
 .gallery-right-links{
     gap: 20px;
 }
-.share , .save i{
+.save i{
     margin-right: 8px;
+}
+.share i{
+  margin-right: 8px;
 }
 .photo_gallery_container{
     margin-top: 24px;
     height: 350px;
 }
-.top-images , .bottom-images{
-    flex-direction: column;
-    width: 50%;
-    height: 100%;
-    overflow: hidden;
+.photo_gallery{
+  position: relative;
+  margin-top: 25px;
+  height: 360px;
+  display: grid;
+  grid-template-columns: 50% 25% 25%;
+  grid-template-rows: 50% 50%;
+  gap: 8px 8px;
 }
-.photo_gallery_right .top-images img{
-  height: 50%;
-}
-.photo_gallery_right .bottom-images img{
-  height: 50%;
-}
-.photo_gallery_container img{
-width: 100%;
-height: 100%;
-}
-.photo_gallery_left, .photo_gallery_right{
-    width: 50%;
-}
-.photo_gallery_right{
-  height: 100%;
+.view-all{
+  position: absolute;
+  right: 211px;
+  bottom: 205px;
 }
 
-.gallery-margin{
-    gap: 8px;
+button{
+  padding: 10px 30px;
+  border-radius: 15px;
+  border: 1px solid var(--dark-grey);
+  font-weight: 600;
+  display: flex;
+  gap: 5px;
 }
-.photo_gallery_left img{
-    border-radius: 8px 0 0 8px;
+.view-all a{
+  text-decoration: none;
 }
-.bottom-images:first-child{
-    border-radius: 0 8px 0 0 ;
+.photo_gallery > img{
+  width: 100%;
+  height: 100%;
+}
+.image-1{
+  border-radius: 10px 0 0 10px;
+grid-column-start: 1;
+grid-column-end: 2;
+grid-row-start: 1;
+grid-row-end: 3;
+}
+.image-3{
+  border-radius: 0 10px 0 0;
+}
+.image-5{
+  border-radius: 0 0 10px 0;
+}
+.bottom-title{
+  margin-top: 50px;
+}
+.bottom-title-icon img{
+  width: 20%;
+  height: 30%;
+}
+li span{
+  font-weight: 300;
+}
+.bottom-title-icon {
+  width: 20%;
+  height: 30%;
+}
+.bottom-title-icon img{
+  width: 20%;
+  height: 30%;
+}
+.bottom-title{
+  gap: 235px;
+}
+.bottom-title-icon{
+  display: flex;
+  align-self: end;
+}
+
+@media screen and (max-width: 720px){
+  .gallery{
+    margin-top: 30px;
+    max-width: 100%;
+    position: relative;
+  }
+ 
+  .gallery p{
+    position: absolute;
+    left: 20px;
+    top: -10px;
+    display: block;
+    overflow: visible;
+  }
+  .gallery-links a{
+    display: none;
+  }
+   .gallery-right-links{
+    position: absolute;
+    right: 40px;
+    top: -10px;
+  }
+  .photo_gallery{
+    grid-template-columns: 100%;
+    grid-row: 100%;
+    display: block;
+  }
+  .image-1{
+    object-fit: cover;
+    border-radius: 0 0 0 0;
+  }
+  .image-2, .image-3, .image-4, .image-5{
+    display: none;
+  }
+  button{
+    display: none;
+  }
+  .gallery h3{
+    position: absolute;
+    bottom: 30px;
+    line-height: 1.5;
+    display: block;
+    left: 20px;
+  }
+  .gallery-links{
+    position: absolute;
+    bottom:20px ;
+  }
+  .bottom-title-heading h3{
+    position: absolute;
+    bottom: -20px;
+    left: 20px;
+  }
 }
