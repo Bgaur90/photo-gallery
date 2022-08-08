@@ -15,6 +15,7 @@
   --btn-color: #d23759;
   --text-color:#222222;
   --black:#000;
+  --white:#fff;
 }
 
 html,
@@ -37,18 +38,9 @@ li {
 }
 
 h1 {
-  font-size: 50px;
-}
-
-h2 {
-  font-size:36px;
-}
-
-h3 {
   font-size: 26px;
   font-weight: 500;
 }
-
 .flex {
   display: flex;
 }
@@ -113,13 +105,14 @@ span {
   bottom: 20px;
 }
 
-button{
+.button{
   padding: 10px 30px;
   border-radius: 15px;
   border: 1px solid var(--dark-grey);
   font-weight: 600;
   display: flex;
   gap: 5px;
+  background-color: var(--white);
 }
 .view-all a{
   text-decoration: none;
@@ -140,33 +133,38 @@ grid-row-end: 3;
 .image-5{
   border-radius: 0 0 10px 0;
 }
-.bottom-title{
+.bottom_title{
   margin-top: 50px;
 }
-.bottom-title-heading ol{
+.bottom_title-heading ul{
   gap: 5px;
 }
-.bottom-title-icon img{
+.bottom_title-icon img{
   width: 20%;
   height: 30%;
 }
 li span{
   font-weight: 300;
 }
-.bottom-title-icon {
+.bottom_title-icon {
   width: 20%;
   height: 30%;
 }
-.bottom-title-icon img{
+.bottom_title-icon img{
   width: 20%;
   height: 30%;
 }
-.bottom-title{
-  gap: 235px;
+.bottom_title{
+  width: 50%;
+  justify-content: space-between;
+  align-items: center;
 }
-.bottom-title-icon{
-  display: flex;
-  align-self: end;
+.bottom_title-heading .gallery-title{
+  font-size: 22px;
+  font-weight: 500;
+}
+.bottom_title-icon img{
+ width: 56px;
 }
 .photo_gallery img:hover{
   cursor: pointer;
